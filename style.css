@@ -4,6 +4,7 @@
     font-size: 16px;
     box-sizing: border-box;
     --main-background-color: #181818;
+    --small-text-fontsize: 12px;
     --small-text-color: #aaaa9a;
     
 }
@@ -11,6 +12,12 @@ body{
     height: 200vh;
     background-color: var(--main-background-color);
     font-family: 'Roboto';
+}
+h1{
+    font-size: 18px;
+}
+h2{
+    font-size: 16px;
 }
 
 .navbar{
@@ -127,7 +134,7 @@ body{
 }
 .video-info p{
     color: var(--small-text-color);
-    font-size: 12px;
+    font-size: var(--small-text-fontsize);
 }
 .video-options{
     display: flex;
@@ -150,4 +157,64 @@ body{
 #like img, #dislike img, #share img, #save img, #more img{
     width: 1.2rem;
     margin-right: 5px;
+}
+.description-box{
+    border-bottom: 1px solid rgba(170, 170, 170, .2);
+    margin-bottom: -1px;
+    padding: 1.2rem 0 .5rem 0;
+}
+.description{
+    padding-left: 61px;
+    font-size: 14px;
+}
+.show-more{
+    cursor: pointer;
+    padding: 0;
+    margin-top: 16px;
+    background-color: var(--main-background-color);
+    border: none;
+    color: var(--small-text-color);
+    font-size: var(--small-text-fontsize);
+}
+.channel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+.channel-options{
+    display: flex;
+    align-items: center;
+}
+.channel-info span{
+    font-size: var(--small-text-fontsize);
+    color: var(--small-text-color);
+}
+.channel-info img{
+    width: .8rem
+}
+
+#channel-pic{
+    margin-right: 1rem;
+    width: 45px;
+    border-radius: 50%;
+}
+#subscribe, #join{
+    line-height: 1.8rem;
+    border-radius: 2px;
+    font-weight: bold;
+}
+#join{
+    background-color: var(--main-background-color);
+    border:1px solid #3ea6ff;
+    color: #3ea6ff;
+    width: 4rem;
+    margin-right: 10px;
+    
+}
+#subscribe{
+    background-color: #bd0000;
+    color: white;
+    border: 1px solid #bd0000;
+    width: 6rem;
 }
