@@ -13,16 +13,29 @@ body{
     background-color: var(--main-background-color);
     font-family: 'Roboto';
 }
+a,a:active, a:hover,a:visited{
+    text-decoration: none;
+    color: inherit;
+}
 h1{
     font-size: 18px;
 }
 h2{
     font-size: 16px;
 }
+h3{
+    font-size: 14px;
+    font-weight: bold;
+}
 
-.navbar{
-    
 
+.page-container{
+    padding: 4.5rem;
+    color: white;
+    display: grid;
+    grid-template-columns: 2fr minmax(280px,1fr);
+    grid-template-rows: auto 1fr;
+    column-gap: 1.7rem;
 }
 .navbar-nav{
     position: fixed;
@@ -100,13 +113,6 @@ h2{
 }
 #sign-in-button > img{
     margin-right: 5px;
-}
-.page-container{
-    padding: 4.5rem;
-    color: white;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto 1fr;
 }
 .video-player{
     position: relative;
@@ -190,8 +196,8 @@ h2{
     font-size: var(--small-text-fontsize);
     color: var(--small-text-color);
 }
-.channel-info img{
-    width: .8rem
+.verified-mark{
+    width: .8rem;
 }
 
 #channel-pic{
@@ -217,4 +223,58 @@ h2{
     color: white;
     border: 1px solid #bd0000;
     width: 6rem;
+}
+.up-next{
+    border-bottom: 1px solid rgba(170, 170, 170, .2);
+    
+}
+
+.thumbnail{
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: .6rem 0;
+}
+.thumbnail:hover .watch-later-tooltip, .thumbnail:hover .playlist-tooltip{
+    display: block;
+}
+.thumbnail-pic{
+    min-width: 172px;
+    max-height: 96px;
+}
+.watch-later-tooltip, .playlist-tooltip{
+    display: none;
+    position: absolute;
+    padding: 2px;
+    border-radius: 2px;
+    left: 142px;
+    background-color: #000000;
+    z-index: 1;
+}
+.watch-later-tooltip{
+    top: 18px;
+    width: 20px;
+    height: 20px;
+}
+.playlist-tooltip{
+    top: 46px;
+    width: 20px;
+    height: 20px;
+}
+.thumbnail-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: .6rem;
+}
+.thumbnail-info span{
+    color: var(--small-text-color);
+    font-size: var(--small-text-fontsize);
+}
+.new-tag{
+    background-color: #333333;
+    width: 1.6rem;
+    border-radius: 2px;
+    padding: .1rem 0.3rem;
+    font-weight: 500;
 }
