@@ -52,6 +52,9 @@ aside{
         grid-template-columns: auto;
         grid-template-rows: repeat(3,auto);
     }
+    .up-next{
+        padding-top: 1rem;
+    }
 }
 @media (max-width: 600px){
     .search-item{
