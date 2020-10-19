@@ -24,10 +24,8 @@ h2{
 }
 h3{
     font-size: 14px;
-    font-weight: bold;
 }
 h4{
-    font-weight: bold;
     font-size: 12px;
 }
 aside{
@@ -127,7 +125,6 @@ aside{
     margin-left: 5px;
     border: none;
     background-color: #121212;
-    font-weight: bold;
     color: white;
 }
 #search-field::placeholder{
@@ -241,7 +238,6 @@ aside{
 #subscribe, #join{
     line-height: 1.8rem;
     border-radius: 2px;
-    font-weight: bold;
 }
 #join{
     background-color: var(--main-background-color);
@@ -407,7 +403,6 @@ aside{
 }
 .view-reply{
     color: #3ea6ff;
-    font-weight: bold;
 }
 .fa-sort-down{
     margin-right: 1rem;
