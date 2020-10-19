@@ -27,6 +27,10 @@ h3{
     font-size: 14px;
     font-weight: bold;
 }
+h4{
+    font-weight: bold;
+    font-size: 12px;
+}
 aside{
     grid-row: span 2;
 }
@@ -319,6 +323,7 @@ aside{
 .add-comment{
     display: flex;
     align-items: center;
+    padding-bottom: 2rem;
 }
 #comment-input{
     width: 100%;
@@ -330,3 +335,54 @@ aside{
     margin-bottom: -1;
 }
 
+.comment{
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+}
+.comment-title{
+    display: flex;
+    align-items: center;
+}
+.comment-title span{
+    margin-left: .5rem;
+    font-size: var(--small-text-fontsize);
+    color: var(--small-text-color);
+}
+.comment-content p{
+    padding: .7rem 0;
+    font-size: 14px;
+}
+.comment-interactions{
+    display: flex;
+    padding-top: .1rem;
+    padding-bottom: .5rem;
+    
+}
+.comment-like, .comment-dislike, .view-reply{
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: var(--main-background-color);
+}
+.comment-like img, .comment-dislike img{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+.comment-like{
+    font-size: var(--small-text-fontsize);
+    color: var(--small-text-color);
+}
+.reply{
+    background-color: var(--main-background-color);
+    border: none;
+    color: var(--small-text-color);
+}
+.view-reply{
+    color: #3ea6ff;
+    font-weight: bold;
+}
+.fa-sort-down{
+    margin-right: 1rem;
+}
