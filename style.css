@@ -27,16 +27,25 @@ h3{
     font-size: 14px;
     font-weight: bold;
 }
-
-
+aside{
+    grid-row: span 2;
+}
 .page-container{
-    padding: 4.5rem;
+    padding: 4.5rem 1rem;
     color: white;
     display: grid;
     grid-template-columns: 2fr minmax(280px,1fr);
     grid-template-rows: auto 1fr;
     column-gap: 1.7rem;
 }
+
+@media (min-width: 1000px){
+    .page-container{
+        padding: 4.5rem;
+    }
+}
+
+
 .navbar-nav{
     position: fixed;
     width: 100%;
@@ -98,8 +107,11 @@ h3{
     margin-left: 5px;
     border: none;
     background-color: #121212;
+    font-weight: bold;
     color: white;
-    
+}
+#search-field::placeholder{
+    font-weight: 100;
 }
 #sign-in-button{
     display: flex;
@@ -200,7 +212,7 @@ h3{
     width: .8rem;
 }
 
-#channel-pic{
+.channel-pic{
     margin-right: 1rem;
     width: 45px;
     border-radius: 50%;
@@ -235,7 +247,7 @@ h3{
     display: flex;
     padding: .6rem 0;
 }
-.thumbnail:hover .watch-later-tooltip, .thumbnail:hover .playlist-tooltip{
+.thumbnail:hover .watch-later-tooltip, .thumbnail:hover .playlist-tooltip, .thumbnail:hover .thumbnail-more{
     display: block;
 }
 .thumbnail-pic{
@@ -261,12 +273,21 @@ h3{
     width: 20px;
     height: 20px;
 }
+.thumbnail-more{
+    position: absolute;
+    display: none;
+    width: 20px;
+    height: 20px;
+    bottom: 5px;
+    right: 0px;
+}
 .thumbnail-info{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin-left: .6rem;
 }
+
 .thumbnail-info span{
     color: var(--small-text-color);
     font-size: var(--small-text-fontsize);
@@ -278,3 +299,34 @@ h3{
     padding: .1rem 0.3rem;
     font-weight: 500;
 }
+.comment-header{
+    padding: 1.2rem 0;
+    display: flex;
+    align-items: center;
+}
+.comment-header img{
+    margin-right: 8px;
+}
+#sort{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    background-color: var(--main-background-color);
+    color: var(--small-text-color);
+    font-weight: bold;
+    border: none;
+}
+.add-comment{
+    display: flex;
+    align-items: center;
+}
+#comment-input{
+    width: 100%;
+    color: white;
+    background-color: var(--main-background-color);
+    border: none;
+    border-bottom: 1px solid rgba(170, 170, 170, .2);
+    padding-bottom: .2rem;
+    margin-bottom: -1;
+}
+
