@@ -9,7 +9,6 @@
     
 }
 body{
-    height: 200vh;
     background-color: var(--main-background-color);
     font-family: 'Roboto';
 }
@@ -43,9 +42,23 @@ aside{
     column-gap: 1.7rem;
 }
 
-@media (min-width: 1000px){
+@media (min-width: 1200px){
     .page-container{
         padding: 4.5rem;
+    }
+}
+@media (max-width: 1000px){
+    .page-container{
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3,auto);
+    }
+}
+@media (max-width: 600px){
+    .search-item{
+        display: none;
+    }
+    .video-info p{
+        display: none;
     }
 }
 
@@ -219,6 +232,7 @@ aside{
 .channel-pic{
     margin-right: 1rem;
     width: 45px;
+    min-width: 45px;
     border-radius: 50%;
 }
 #subscribe, #join{
@@ -339,6 +353,7 @@ aside{
     width: 90%;
     display: flex;
     align-items: flex-start;
+    padding-bottom: 2rem;
 }
 .comment-title{
     display: flex;
@@ -352,6 +367,14 @@ aside{
 .comment-content p{
     padding: .7rem 0;
     font-size: 14px;
+    line-height: 1.3rem;
+}
+.read-more{
+    color: var(--small-text-color);
+}
+.read-more:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 .comment-interactions{
     display: flex;
